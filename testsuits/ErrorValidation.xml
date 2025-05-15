@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "../testng-1.1.dtd">
+<suite parallel="tests" name="Suite">
+
+	<groups>
+		<run>
+			<include name="ErorHandling"></include>
+		</run>
+
+	</groups>
+
+	<test thread-count="3" name="positiveTesting">
+		<classes>
+			<class name="positiveTesting.WebApplication" />
+		</classes>
+	</test>
+
+	<test thread-count="3" name="negativeTesting">
+		<classes>
+			<class name="negativeTesting.ErrorValidations" />
+		</classes>
+	</test>
+
+</suite> <!-- Suite -->

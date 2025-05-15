@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "../testng-1.1.dtd">
+<suite parallel="methods" name="Suite">
+
+
+	<listeners>
+		<listener class-name="PageModules.Listeners" />
+	</listeners>
+
+
+	<test thread-count="1" name="positiveTesting">
+		<classes>
+			<class name="positiveTesting.WebApplication" />
+		</classes>
+	</test>
+
+	<test thread-count="1" name="negativeTesting">
+		<classes>
+			<class name="negativeTesting.ErrorValidations" />
+		</classes>
+	</test>
+
+</suite> <!-- Suite -->

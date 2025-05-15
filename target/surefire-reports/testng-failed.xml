@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="methods" name="Failed suite [Suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <listeners>
+    <listener class-name="PageModules.Listeners"/>
+  </listeners>
+  <test thread-count="5" parallel="methods" name="positiveTesting(failed)" verbose="0">
+    <classes>
+      <class name="positiveTesting.WebApplication">
+        <methods>
+          <include name="closeWindow"/>
+          <include name="orderHistoryTest"/>
+          <include name="openUrl"/>
+          <include name="runWebApplication"/>
+        </methods>
+      </class> <!-- positiveTesting.WebApplication -->
+    </classes>
+  </test> <!-- positiveTesting(failed) -->
+  <test thread-count="5" parallel="methods" name="negativeTesting(failed)" verbose="0">
+    <classes>
+      <class name="negativeTesting.ErrorValidations">
+        <methods>
+          <include name="productInCartErrorValidation"/>
+          <include name="closeWindow"/>
+          <include name="productErrorValidation"/>
+          <include name="openUrl"/>
+          <include name="loginErrorValidation"/>
+        </methods>
+      </class> <!-- negativeTesting.ErrorValidations -->
+    </classes>
+  </test> <!-- negativeTesting(failed) -->
+</suite> <!-- Failed suite [Suite] -->
