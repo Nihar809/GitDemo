@@ -29,6 +29,9 @@ public class WebApplication extends Base {
 
 	@Test(dataProvider = "getData", groups = { "purchase" })
 	public void runWebApplication(HashMap<String, String> input) throws IOException {
+
+// this is just for testing purpose
+
 		product = login.login(input.get("email"), input.get("password"));
 		cart = product.addProductToCart(input.get("productName"));
 		payment = cart.clickOnBuyNow(input.get("productName"));
